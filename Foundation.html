@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基础</title>
+</head>
+<script>
+	//1、alert的值
+	// var a = 6;
+	// setTimeout(function(){
+	// 	alert(a);
+	// 	a = 666;
+	// },1000)
+	// a = 66;
+
+	//2、前端页面有哪三层构成，分别是什么？作用是什么
+
+	// 	网页分成三个层次，即：结构层、表示层、行为层。
+	//  网页的结构层（structural layer）由 HTML 或 XHTML 之类的标记语言负责创建。标签，也就是那些出现在尖括号里的单词，对网页内容的语义含义做出了描述，但这些标签不包含任何关于如何显示有关内容的信息。例如，P 标签表达了这样一种语义：“这是一个文本段。”
+	// 网页的表示层（presentation layer） 由 CSS 负责创建。 CSS 对“如何显示有关内容”的问题做出了回答。
+	// 网页的行为层（behavior layer）负责回答“内容应该如何对事件做出反应”这一问题。这是 Javascript 语言和 DOM 主宰的领域。
+	// 网页的表示层和行为层总是存在的，即使我们未明确地给出任何具体的指令也是如此。此时， Web 浏览器将把它的默认样式和默认事件处理函数施加在网页的结构层上。例如，浏览器会在呈现“文本段”元素时留出页边距，有些浏览器会在用户把鼠标指针悬停在 某个元素的上方时弹出一个显示着该元素的 title 属性值的提示框，等等。
+
+	//3、console.log 值是什么；
+
+	// var a = 1;
+	// function test(){
+	// 	console.log(a);//undefined
+	// 	var a = 2;
+	// }
+	// test()
+	// console.log(a)//1
+
+	//4、console.log 值是什么
+
+	// (function test(){
+	// 	var a = b =1
+	// })()
+	// console.log(b)//1
+	// console.log(a)//错误
+
+	//5、apply、call 的区别
+
+	// function fruits(){}
+	// fruits.prototype = {
+	// 	color:'red',
+	// 	say:function(){
+	// 		console.log('My color is ' + this.color)
+	// 	}
+
+	// }
+
+	// var apple = new fruits();
+	// apple.say()//My color is red
+
+	// var banner = {
+	// 	color:'yellow'
+	// }
+	// //都是改变this的指向
+	// apple.say.call(banner)//My color is yellow
+	// apple.say.apply(banner)//My color is yellow 
+
+	// var test = function (arg1,arg2){}
+	// test.call(this,arg1,arg2)//传参形式
+	// test.apply(this,[arg1,arg2])//传参形式
+	function log(){
+	  console.log.apply(console, arguments);
+	};
+	log(1);    //1
+	log(1,2);    //1 2
+
+	//6、
+
+</script>
+
+<body>
+</body>
+</html>
